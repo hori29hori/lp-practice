@@ -28,7 +28,7 @@ header i {
     color: #777;
     padding: 15px 0;
 }
-header .contact a button {
+header .Contact-btn {
     background: #6da7eb;
     color: #fff;
     padding: 10px 20px;
@@ -36,7 +36,7 @@ header .contact a button {
     cursor: pointer;
     transition: color 0.3s;
 }
-header .contact a button:hover {
+header .Contact-btn:hover {
     color: #333;
 }
 .sp-menu {
@@ -202,7 +202,7 @@ header .contact a button:hover {
   gap: 30px;
 }
 .sns i {
-  font-size: 24px;
+  font-size: 40px;
   color: #333;
   background-color: transparent;
   padding: 10px;
@@ -223,23 +223,9 @@ header .contact a button:hover {
   box-sizing: border-box;
 }
 
-header .contact button {
-  width: 140px;         
-  height: 40px;
-  font-size: 14px;
-  border: none;
-  border-radius: 20px;
-  background-color: #6ba7eb;
-  color: #fff;
-  cursor: pointer;
-  white-space: nowrap;  
-}
+header .Contact-btn {
 
-header .sp-menu {
-  display: block;        
-  font-size: 28px;
-  margin-left: 15px;
-}
+
 header i.fas.fa-archway {
   font-size: 2.2rem;
 }
@@ -314,7 +300,7 @@ header .inner > * {
 
 @media screen and (max-width: 767px) {
   
-  .contact {
+  .Contact-btn {
     display: none;
   }
    .sp-menu {
@@ -437,6 +423,5 @@ header .inner > * {
     font-size: 40px;
     margin: 20px 15px;
   }
- 
-
+}
 }
