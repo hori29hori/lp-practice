@@ -213,6 +213,15 @@ header .Contact-btn:hover {
   background-color: #fff;
 }
 
+.footer {
+  background-color: #cfd8dc; 
+  padding: 25px 0;
+}
+.footer .inner {
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
 @media screen and (max-width: 1199px) {
   header .inner {
   display: flex;
