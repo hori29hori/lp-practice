@@ -36,7 +36,7 @@
       </section>
 
       <!-- 「NEWS」 -->
-      <section class="news">
+      <section class="news fade-in">
         <div class="inner">
           <div class="news-flex">
             <img src="./images/news/news.png" alt="News Icon">
@@ -51,7 +51,7 @@
       </section>
 
       <!-- 「SKILLS」-->
-      <section class="skills">
+      <section class="skills fade-in">
         <div class="inner">
           <h2>WE ARE SKILLS</h2>
           <div class="skills-list">
@@ -66,7 +66,7 @@
       </section>
 
       <!-- 「SELECT PLAN」 -->
-      <section class="plan">
+      <section class="plan fade-in">
         <div class="inner">
           <h2>SELECT PLAN</h2>
           <table class="plan-table">
@@ -99,7 +99,7 @@
       </section>
 
       <!-- SNS -->
-      <nav class="sns">
+      <nav class="sns fade-in">
         <div class="inner">
           <ul>
             <li><i class="fab fa-facebook-f"></i></li>
@@ -115,5 +115,21 @@
     <p>&copy; 2025 Your Company</p>
   </div>
 </footer>
+<script>
+  const fadeElems = document.querySelectorAll('.fade-in');
+
+  const fadeInOnScroll = () => {
+    fadeElems.forEach(elem => {
+      const rect = elem.getBoundingClientRect();
+      const showTiming = window.innerHeight * 0.8; 
+      if (rect.top < showTiming) {
+        elem.classList.add('show');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', fadeInOnScroll);
+  fadeInOnScroll(); 
+</script>
 </body>
 </html>

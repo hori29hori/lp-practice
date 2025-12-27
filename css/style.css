@@ -45,7 +45,7 @@ header .Contact-btn:hover {
 
 .keyvisual {
   text-align: center;
-  padding: 120px 20px;
+  padding: 400px 20px;
   height: 100vh;
   background: url("../images/keyvisual/keyvisual.jpg") no-repeat center center;
   background-size: cover;
@@ -66,7 +66,6 @@ header .Contact-btn:hover {
 }
 .keyvisual {
     text-align: center;
-    padding: 400px 20px;
     background: url("../images/keyvisual/keyvisual.jpg") no-repeat center/cover;
 }
 .keyvisual .main-title {
@@ -207,7 +206,7 @@ header .Contact-btn:hover {
   background-color: transparent;
   padding: 10px;
   border-radius: 50%;
-  transition: background-color 0.5s;
+  transition: background-color 0.5s ease;
 }
 .sns i:hover {
   background-color: #fff;
@@ -223,6 +222,10 @@ header .Contact-btn:hover {
 }
 
 @media screen and (max-width: 1199px) {
+  .inner {
+    width:97%;
+  }
+
   header .inner {
   display: flex;
   justify-content: space-between;
@@ -305,6 +308,10 @@ header .inner > * {
 }
 
 @media screen and (max-width: 767px) {
+
+  .inner {
+    width: 97%;
+  }
   
   .Contact-btn {
     display: none;
@@ -428,5 +435,67 @@ header .inner > * {
   .sns img {
     font-size: 40px;
     margin: 20px 15px;
+  }
+}
+
+/* ======== ② スクロール出現アニメーション ======== */
+
+/* 出現前の状態（透明＆少し下にずらす） */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+/* 表示されたら付与するクラス */
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ======== ④ SKILLS：マウスホバーで紙のように動く ======== */
+
+.skills-list img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-origin: center;
+}
+
+.skills-list img:hover {
+  transform: perspective(600px) rotateX(8deg) rotateY(-8deg) scale(1.03);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 767px) {
+  .skills-list img:hover {
+    transform: none;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.15);
+  }
+}
+
+/* タイトル落下アニメ */
+.keyvisual .main-title,
+.keyvisual .sub-title {
+  opacity: 0;
+  transform: translateY(-50px); /* 上から */
+  animation: dropDown 0.8s ease forwards;
+}
+
+.keyvisual .sub-title {
+  animation-delay: 0.3s; /* タイトルの後で */
+}
+
+/* 落ちる動き */
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(10px); /* 一瞬ふわっと跳ねる */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* 定位置に */
   }
 }
