@@ -34,7 +34,7 @@ header .Contact-btn {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 header .Contact-btn:hover {
     color: #333;
